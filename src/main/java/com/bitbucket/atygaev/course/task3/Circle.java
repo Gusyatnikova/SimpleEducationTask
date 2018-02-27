@@ -1,0 +1,68 @@
+package com.bitbucket.atygaev.course.task3;
+
+import java.util.Objects;
+
+/**
+ * Circle with the given radius.
+ */
+public class Circle {
+
+    /**
+     * TODO: Implement the method.
+     *
+     * @return radius of the circle.
+     */
+    public double getRadius() {
+        throw new UnsupportedOperationException();
+    }
+
+    /**
+     * TODO: Implement the method.
+     *
+     * <p>
+     * Calculates and returns area of the circle.
+     * </p>
+     * <p>
+     * Math formula is <b>Math.PI * R * R</b> where <b>R</b> is radius of the given circle.
+     *</p>
+     * @return area of the circle.
+     */
+    public double getArea() {
+        throw new UnsupportedOperationException();
+    }
+
+    /**
+     * Calculates and returns hash code by using radius of the circle.
+     *
+     * @return hashcode of radius.
+     */
+    @Override
+    public int hashCode() {
+        return Objects.hash(getRadius());
+    }
+
+    /**
+     * Two circles is equal when and only when they have the same radius.
+     *
+     * @return true when passed object is equal to the circle. Otherwise, false.
+     */
+    @Override
+    public boolean equals(Object object) {
+        if (object == this) { return true; }
+        if ((object == null) || (getClass() != object.getClass())) { return false; }
+
+        Circle circle = (Circle) object;
+
+        return Objects.equals(getRadius(), circle.getRadius());
+    }
+
+    /**
+     * Human readable representation of the circle.
+     *
+     * @return class name and radius.
+     */
+    @Override
+    public String toString() {
+        return String.format("Circle{radius=%.2f}", getRadius());
+    }
+}
