@@ -5,15 +5,26 @@ import java.util.Objects;
 /**
  * Circle with the given radius.
  */
-public class Circle {
 
+public class Circle {
+    private double radius;
     /**
      * TODO: Implement the method.
      *
      * @return radius of the circle.
      */
+    public Circle(double givenRadius) {
+        if(givenRadius < 0){
+            throw new IllegalArgumentException("Radius is negative but should be positive.");
+        }
+        else if(givenRadius == 0) {
+            throw new IllegalArgumentException("Radius is zero but should be positive.");
+        }
+        radius = givenRadius;
+    }
+
     public double getRadius() {
-        throw new UnsupportedOperationException();
+        return radius;
     }
 
     /**
@@ -28,7 +39,7 @@ public class Circle {
      * @return area of the circle.
      */
     public double getArea() {
-        throw new UnsupportedOperationException();
+        return Math.PI * Math.pow(getRadius(), 2);
     }
 
     /**

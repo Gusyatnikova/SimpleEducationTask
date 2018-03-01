@@ -12,10 +12,26 @@ public class Rectangle {
      *
      * @return height of the rectangle.
      */
-    public double getHeight() {
-        throw new UnsupportedOperationException();
-    }
 
+
+    private double height;
+    private double width;
+
+
+    Rectangle(double height, double width) {
+        if (height < 0) {
+            throw new IllegalArgumentException("Height is negative but should be positive.");
+        } else if (height == 0) {
+            throw new IllegalArgumentException("Height is zero but should be positive.");
+        } else if (width < 0) {
+            throw new IllegalArgumentException("Width is negative but should be positive.");
+        } else if (width == 0) {
+            throw new IllegalArgumentException("Width is zero but should be positive.");
+        } else {
+            this.height = height;
+            this.width = width;
+        }
+    }
 
     /**
      * TODO: Implement the method.
@@ -23,23 +39,26 @@ public class Rectangle {
      * @return width of the rectangle.
      */
     public double getWidth() {
-        throw new UnsupportedOperationException();
+        return width;
     }
-
+    public double getHeight() {
+        return height;
+    }
     /**
      * TODO: Implement the method.
-     *
+     * <p>
      * <p>
      * Calculates and returns area of the rectangle.
      * </p>
      * <p>
      * Math formula is <b>H * W</b> where <b>H</b> is height of the given rectangle,
      * <b>W</b> is width of the given rectangle.
-     *</p>
+     * </p>
+     *
      * @return area of the rectangle.
      */
     public double getArea() {
-        throw new UnsupportedOperationException();
+        return getHeight() * getWidth();
     }
 
     /**
@@ -59,8 +78,12 @@ public class Rectangle {
      */
     @Override
     public boolean equals(Object object) {
-        if (object == this) { return true; }
-        if ((object == null) || (getClass() != object.getClass())) { return false; }
+        if (object == this) {
+            return true;
+        }
+        if ((object == null) || (getClass() != object.getClass())) {
+            return false;
+        }
 
         Rectangle rectangle = (Rectangle) object;
 

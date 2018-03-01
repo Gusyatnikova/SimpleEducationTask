@@ -40,7 +40,7 @@ public class SquareTest {
         expectedException.expectMessage("Length is negative but should be positive.");
 
         // TODO: Uncomment the line when constructor is available
-        // new Square(-generateLength());
+         new Square(-generateLength());
     }
 
     @Test
@@ -49,7 +49,7 @@ public class SquareTest {
         expectedException.expectMessage("Length is zero but should be positive.");
 
         // TODO: Uncomment the line when constructor is available
-        // new Square(0);
+         new Square(0);
     }
 
     @Test

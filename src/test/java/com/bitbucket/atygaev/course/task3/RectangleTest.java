@@ -40,7 +40,7 @@ public class RectangleTest {
         expectedException.expectMessage("Height is negative but should be positive.");
 
         // TODO: Uncomment the line when constructor is available
-        // new Rectangle(-generateLength(), generateLength());
+        new Rectangle(-generateLength(), generateLength());
     }
 
     @Test
@@ -49,7 +49,7 @@ public class RectangleTest {
         expectedException.expectMessage("Height is zero but should be positive.");
 
         // TODO: Uncomment the line when constructor is available
-        // new Rectangle(0, generateLength());
+        new Rectangle(0, generateLength());
     }
 
     @Test
@@ -58,7 +58,7 @@ public class RectangleTest {
         expectedException.expectMessage("Width is negative but should be positive.");
 
         // TODO: Uncomment the line when constructor is available
-        // new Rectangle(generateLength(), -generateLength());
+        new Rectangle(generateLength(), -generateLength());
     }
 
     @Test
@@ -67,7 +67,7 @@ public class RectangleTest {
         expectedException.expectMessage("Width is zero but should be positive.");
 
         // TODO: Uncomment the line when constructor is available
-        // new Rectangle(generateLength(), 0);
+        new Rectangle(generateLength(), 0);
     }
 
     @Test

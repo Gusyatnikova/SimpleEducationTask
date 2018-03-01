@@ -6,14 +6,32 @@ import java.util.Objects;
  * Ellipse with the given horizontal radius and vertical radius.
  */
 public class Ellipse {
+    private double horizontalRadius;
+    private double verticalRadius;
 
     /**
      * TODO: Implement the method.
      *
      * @return horizontal radius of the ellipse.
      */
+    public Ellipse(double horizontalRadius, double verticalRadius) {
+        if (horizontalRadius < 0) {
+            throw new IllegalArgumentException("Horizontal radius is negative but should be positive.");
+        } else if (horizontalRadius == 0) {
+            throw new IllegalArgumentException("Horizontal radius is zero but should be positive.");
+        }
+        if (verticalRadius < 0) {
+            throw new IllegalArgumentException("Vertical radius is negative but should be positive.");
+        } else if (verticalRadius == 0) {
+            throw new IllegalArgumentException("Vertical radius is zero but should be positive.");
+        }
+        this.horizontalRadius = horizontalRadius;
+        this.verticalRadius = verticalRadius;
+
+    }
+
     public double getHorizontalRadius() {
-        throw new UnsupportedOperationException();
+        return horizontalRadius;
     }
 
 
@@ -23,23 +41,24 @@ public class Ellipse {
      * @return vertical radius of the ellipse.
      */
     public double getVerticalRadius() {
-        throw new UnsupportedOperationException();
+        return verticalRadius;
     }
 
     /**
      * TODO: Implement the method.
-     *
+     * <p>
      * <p>
      * Calculates and returns area of the ellipse.
      * </p>
      * <p>
      * Math formula is <b>Math.PI * Rh * Rv</b> where <b>Rh</b> is horizontal radius of the given ellipse,
      * <b>Rv</b> is vertical radius of the given ellipse.
-     *</p>
+     * </p>
+     *
      * @return area of the ellipse.
      */
     public double getArea() {
-        throw new UnsupportedOperationException();
+        return Math.PI * getHorizontalRadius() * getVerticalRadius();
     }
 
     /**
@@ -59,8 +78,12 @@ public class Ellipse {
      */
     @Override
     public boolean equals(Object object) {
-        if (object == this) { return true; }
-        if ((object == null) || (getClass() != object.getClass())) { return false; }
+        if (object == this) {
+            return true;
+        }
+        if ((object == null) || (getClass() != object.getClass())) {
+            return false;
+        }
 
         Ellipse ellipse = (Ellipse) object;
 

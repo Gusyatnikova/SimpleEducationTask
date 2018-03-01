@@ -7,6 +7,16 @@ import java.util.Objects;
  * Square with the given side length.
  */
 public class Square {
+    private double length;
+
+    Square(double length) {
+        if (length < 0) {
+            throw new IllegalArgumentException("Length is negative but should be positive.");
+        } else if (length == 0) {
+            throw new IllegalArgumentException("Length is zero but should be positive.");
+        }
+        this.length = length;
+    }
 
     /**
      * TODO: Implement the method.
@@ -14,22 +24,23 @@ public class Square {
      * @return length of the side of the square.
      */
     public double getLength() {
-        throw new UnsupportedOperationException();
+        return this.length;
     }
 
     /**
      * TODO: Implement the method.
-     *
+     * <p>
      * <p>
      * Calculates and returns area of the square.
      * </p>
      * <p>
      * Math formula is <b>L * L</b> where <b>L</b> is length of side of the given square.
-     *</p>
+     * </p>
+     *
      * @return area of the square.
      */
     public double getArea() {
-        throw new UnsupportedOperationException();
+        return Math.pow(getLength(), 2);
     }
 
     /**
@@ -49,8 +60,12 @@ public class Square {
      */
     @Override
     public boolean equals(Object object) {
-        if (object == this) { return true; }
-        if ((object == null) || (getClass() != object.getClass())) { return false; }
+        if (object == this) {
+            return true;
+        }
+        if ((object == null) || (getClass() != object.getClass())) {
+            return false;
+        }
 
         Square square = (Square) object;
 

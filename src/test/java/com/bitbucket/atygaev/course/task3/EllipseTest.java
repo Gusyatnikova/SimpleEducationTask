@@ -40,7 +40,7 @@ public class EllipseTest {
         expectedException.expectMessage("Horizontal radius is negative but should be positive.");
 
         // TODO: Uncomment the line when constructor is available
-        // new Ellipse(-generateRadius(), generateRadius());
+        new Ellipse(-generateRadius(), generateRadius());
     }
 
     @Test
@@ -49,7 +49,7 @@ public class EllipseTest {
         expectedException.expectMessage("Horizontal radius is zero but should be positive.");
 
         // TODO: Uncomment the line when constructor is available
-        // new Ellipse(0, generateRadius());
+        new Ellipse(0, generateRadius());
     }
 
     @Test
@@ -58,7 +58,7 @@ public class EllipseTest {
         expectedException.expectMessage("Vertical radius is negative but should be positive.");
 
         // TODO: Uncomment the line when constructor is available
-        // new Ellipse(generateRadius(), -generateRadius());
+        new Ellipse(generateRadius(), -generateRadius());
     }
 
     @Test
@@ -67,7 +67,7 @@ public class EllipseTest {
         expectedException.expectMessage("Vertical radius is zero but should be positive.");
 
         // TODO: Uncomment the line when constructor is available
-        // new Ellipse(generateRadius(), 0);
+        new Ellipse(generateRadius(), 0);
     }
 
     @Test

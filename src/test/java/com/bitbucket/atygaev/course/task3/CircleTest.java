@@ -40,7 +40,7 @@ public class CircleTest {
         expectedException.expectMessage("Radius is negative but should be positive.");
 
         // TODO: Uncomment the line when constructor is available
-        // new Circle(-generateRadius());
+        new Circle(-generateRadius());
     }
 
     @Test
@@ -49,7 +49,7 @@ public class CircleTest {
         expectedException.expectMessage("Radius is zero but should be positive.");
 
         // TODO: Uncomment the line when constructor is available
-        // new Circle(0);
+        new Circle(0);
     }
 
     @Test

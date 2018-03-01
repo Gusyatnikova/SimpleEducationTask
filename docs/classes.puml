@@ -1,0 +1,48 @@
+
+ @startuml
+ class Circle {
+ -radius : double
+ Circle(double)
+ +double getRadius()
+ +double getArea()
+ +int hashCode()
+ + boolean equals(Object)
+ + String toString()
+ }
+
+ class Ellipse {
+ -horizontalRadius : double
+ -verticalRadius : double
+ +Ellipse(double, double)
+ +double getHorizontalRadius()
+ +double getVerticalRadius()
+ +double getArea()
+ +int hashCode()
+ +boolean equals(Object)
+ +String toString()
+ }
+
+ class Rectangle {
+   - height : double
+   - width : double
+   Rectangle(double, double)
+    + double getWidth()
+    + double getHeight()
+    + double getArea()
+    +int hashCode()
+    +boolean equals(Object)
+    +String toString()
+ }
+ class Square {
+     -length : double
+     Square(double)
+     + double getLength()
+     + double getArea()
+     +int hashCode()
+    +boolean equals(Object)
+    +String toString()
+ }
+  Rectangle <|-- Square
+  Ellipse <|-- Circle
+
+ @enduml
