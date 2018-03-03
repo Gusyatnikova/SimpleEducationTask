@@ -44,5 +44,4 @@
  }
   Rectangle <|-- Square
   Ellipse <|-- Circle
-
  @enduml
